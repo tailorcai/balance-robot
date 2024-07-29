@@ -42,6 +42,11 @@ void loop() {
       Serial.print("You entered: >");
       Serial.print(buf);
       Serial.println("<");
+      if( strncmp(buf, "reset", 5) == 0 ) {
+        for(int i=0;i<3;i++) myservos[i].write( 90 );
+        Serial.println("ok");
+        return;
+      }
       int id, angle;
       int n = sscanf(buf, "%d %d", &id, &angle);
       if( n == 2 ) {
