@@ -1,9 +1,9 @@
 #include <Arduino.h>
 
-#define xLow  A1
-#define xHigh A3
-#define yLow A0
-#define yHigh A2
+#define xLow  A0
+#define xHigh A2
+#define yLow A1
+#define yHigh A3
 
 typedef struct {
   unsigned int x;
